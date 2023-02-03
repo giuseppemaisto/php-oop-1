@@ -29,7 +29,12 @@ $movie_1->paese = 'America';
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <?php
+                echo "titolo film:  ". $movie_1->titolo;
                 
+                echo "<br> anno di uscita:  ". $movie_1->anno;
+                echo "<br> paese di produzione:  ". $movie_1->paese;
+                ?>
             </div>
         </div>
     </div>
