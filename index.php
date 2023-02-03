@@ -4,12 +4,20 @@ class Movie {
     public $anno;
     public $paese;
 
+    public function __construct($_titolo, $_anno, $_paese){
+        $this->titolo = $_titolo;
+        $this->anno = $_anno;
+        $this->paese = $_paese;
+    }
+
 }
 
-$movie_1 = new Movie();
-$movie_1->titolo = 'Star Wars: una nuova speranza ';
-$movie_1->anno = '1977';
-$movie_1->paese = 'America';
+$movie_1 = new Movie('Star Wars: Una nuova speranza', '1977', 'america');
+$movie_2 = new Movie('Star Wars: L\impero colpisce ancora', '1980', 'america');
+$movie_3 = new Movie('Star Wars: Il ritorno dello Jedi ', '1983', 'america');
+$movie_4 = new Movie('Star Wars: il risveglio della forza ', '2015', 'america');
+$movie_5 = new Movie('Star Wars: Gli ultimi jedi', '2017', 'america');
+$movie_6 = new Movie('Star Wars: L\ascesa di Skywalker', '2019', 'america');
 
 
 
@@ -30,10 +38,7 @@ $movie_1->paese = 'America';
         <div class="row">
             <div class="col-12">
                 <?php
-                echo "titolo film:  ". $movie_1->titolo;
-                
-                echo "<br> anno di uscita:  ". $movie_1->anno;
-                echo "<br> paese di produzione:  ". $movie_1->paese;
+               
                 ?>
             </div>
         </div>
