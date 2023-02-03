@@ -2,22 +2,34 @@
 class Movie {
     public $titolo;
     public $anno;
-    public $paese;
+    public static $paese = 'America';
 
-    public function __construct($_titolo, $_anno, $_paese){
+    public function __construct($_titolo, $_anno,){
         $this->titolo = $_titolo;
         $this->anno = $_anno;
-        $this->paese = $_paese;
+       
     }
+
+    public function PrintMovieTitolo(){
+        
+       return $this->titolo;
+       
+      
+    }
+    public function PrintMovieAnno(){
+        
+        return $this->anno;
+        
+       
+     }
 
 }
 
+
+
 $movie_1 = new Movie('Star Wars: Una nuova speranza', '1977', 'america');
-$movie_2 = new Movie('Star Wars: L\impero colpisce ancora', '1980', 'america');
-$movie_3 = new Movie('Star Wars: Il ritorno dello Jedi ', '1983', 'america');
-$movie_4 = new Movie('Star Wars: il risveglio della forza ', '2015', 'america');
-$movie_5 = new Movie('Star Wars: Gli ultimi jedi', '2017', 'america');
-$movie_6 = new Movie('Star Wars: L\ascesa di Skywalker', '2019', 'america');
+$movie_2 = new Movie('Star Wars: L impero colpisce ancora', '1980', 'america');
+
 
 
 
@@ -37,10 +49,24 @@ $movie_6 = new Movie('Star Wars: L\ascesa di Skywalker', '2019', 'america');
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <?php
                
-                ?>
+                  <h1><?php echo "Titolo film.  " .$movie_1->PrintMovieTitolo();?></h1>
+
+                  <h2><?php echo "anno di Uscita.  " .$movie_1->PrintMovieAnno();?></h2>
+
+                  <h3><?php echo "paese di produzione: " .Movie::$paese?></h3>
+               
             </div>
+
+            <div class="col-12">
+               
+               <h1><?php echo "Titolo film.  " .$movie_2->PrintMovieTitolo();?></h1>
+
+               <h2><?php echo "anno di Uscita.  " .$movie_2->PrintMovieAnno();?></h2>
+
+               <h3><?php echo "paese di produzione: " .Movie::$paese?></h3>
+            
+         </div>
         </div>
     </div>
 </body>
