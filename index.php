@@ -10,6 +10,14 @@ class Movie {
        
     }
 
+    public function setPoster($poster){
+        $this->poster = $poster;
+    }
+    public function getPoster($poster){
+        $this->poster = $poster;
+    }
+
+
     public function PrintMovieTitolo(){
         
        return $this->titolo;
